@@ -8,38 +8,6 @@
   });
 
 
-  // script.js
-  // script.js
-  document.addEventListener("DOMContentLoaded", function () {
-    // Check the user's preference for dark mode and apply it if set
-    const body = document.body;
-    const switchTheme = document.querySelector(".switch__theme");
-    const sunIcon = switchTheme.querySelector(".fa-regular.fa-sun");
-    const moonIcon = switchTheme.querySelector(".fa-solid.fa-moon");
-
-    if (localStorage.getItem("theme") === "dark") {
-      body.classList.add("dark-mode");
-      sunIcon.style.display = "none"; // Hide the sun icon in dark mode
-      moonIcon.style.display = "block"; // Show the moon icon in dark mode
-    }
-
-    // Add a click event listener to the theme switcher
-    switchTheme.addEventListener("click", function () {
-      // Toggle dark mode
-      body.classList.toggle("dark-mode");
-
-      // Toggle the display of the sun and moon icons
-      sunIcon.style.display = body.classList.contains("dark-mode") ? "none" : "block";
-      moonIcon.style.display = body.classList.contains("dark-mode") ? "block" : "none";
-
-      // Save the user's preference in local storage
-      if (body.classList.contains("dark-mode")) {
-        localStorage.setItem("theme", "dark");
-      } else {
-        localStorage.setItem("theme", "light");
-      }
-    });
-  });
 
 
   //banner
@@ -109,7 +77,7 @@
     infinite: false,
     speed: 1000,
     slidesToShow: 6,
-    autoplay: false,
+    autoplay: true,
     slidesToScroll: 1,
     responsive: [
       {
@@ -169,5 +137,21 @@
   });
 
 
+  // promo code
+  const promoField = document.getElementById('promoField');
+  const promoCodeInput = document.getElementById('promoCodeInput');
+
+  promoField.addEventListener('click', function () {
+    // Toggle the visibility of the promo__code input field
+    if (promoCodeInput.style.display === 'none' || promoCodeInput.style.display === '') {
+      promoCodeInput.style.display = 'block';
+    } else {
+      promoCodeInput.style.display = 'none';
+    }
+  });
+
+  // select language
+
+  // mega win game
 
 })(jQuery);

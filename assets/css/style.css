@@ -66,6 +66,49 @@ body {
 }
 
 /* manu start */
+
+.header__logo img {
+    max-width: 120px;
+    width: 100%;
+    height: 66px;
+    object-fit: cover;
+}
+
+#offcanvas__desktop {
+    background: #101213;
+    padding: 20px;
+}
+
+#offcanvas__desktop ul li a {
+    color: #fff;
+    transition: all .5s ease-in-out;
+    font-size: 18px;
+}
+
+#offcanvas__desktop ul li a:hover {
+    opacity: .8;
+}
+
+#offcanvas__desktop ul li {
+    margin-top: 15px;
+}
+
+.header__top__right button {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.header__top__right button.login {
+    background: #A0CF2F;
+}
+
+.header__top__right button.signup {
+    background: #D64E4E;
+}
+
 .header__bottom {
     background: #22252A;
 }
@@ -175,6 +218,7 @@ marquee.marquee p {
 /* game start */
 .single__game {
     position: relative;
+    display: block;
 }
 
 .game__photo img {
@@ -190,11 +234,39 @@ marquee.marquee p {
     width: 100%;
 }
 
+.single__game h6 {
+    color: #fff;
+    background: #000;
+    margin-bottom: 0;
+    border-radius: 0 0 8px 8px;
+    padding: 5px 10px;
+    text-transform: capitalize;
+    opacity: .8;
+}
+
+.show__game button {
+    background: #a0cf2f;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+}
+
+.show__game {
+    text-align: center;
+}
+
 /* game end */
 
 /* result start */
 .result__slider__active img {
     border-radius: 10px;
+    width: 100%;
+}
+
+.slider-content {
+    justify-content: space-between;
+    padding: 20px;
 }
 
 .single__result {
@@ -202,8 +274,25 @@ marquee.marquee p {
     color: #fff;
     border-radius: 10px;
     height: 100%;
+    position: relative;
     padding: 50px 30px;
     text-align: center;
+}
+
+.slide__content__left {
+    text-align: left;
+}
+
+.slide__content__right:hover button {
+    background: #000
+}
+
+.slide__content__right button {
+    transition: all .5s ease-in-out;
+}
+
+.slide__content__left h6 {
+    margin-bottom: 0;
 }
 
 .single__result button {
@@ -287,6 +376,8 @@ marquee.marquee p {
     height: 100%;
     vertical-align: middle;
     text-align: center;
+    cursor: pointer;
+    padding: 0 10px;
 }
 
 .slick-track {
@@ -558,3 +649,106 @@ ul.footer__social li a i {
     float: right;
     cursor: pointer;
 }
+
+/* language start */
+
+.flag img {
+    width: 50px;
+    height: 34px;
+    border-radius: 3px;
+}
+
+.select__language {
+    gap: 30px;
+    margin-bottom: 10px;
+}
+
+.select__language a {
+    color: #000;
+    font-weight: 600;
+}
+
+.single__language h6 {
+    text-align: start;
+}
+
+/* language end */
+
+/* login start */
+#login__form .form-group {
+    position: relative;
+}
+
+#login__form .password-toggle-button {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+/* Style the button to look like an eye icon with a border */
+#login__form .password-toggle-button::before {
+    content: '\f06e';
+    /* Unicode for an eye icon */
+    font-family: FontAwesome;
+    /* Use a font icon library like FontAwesome */
+    font-size: 18px;
+    border: 1px solid #ccc;
+    padding: 3px;
+    border-radius: 3px;
+}
+
+/* Style the button when the password is visible */
+#login__form .password-visible .password-toggle-button::before {
+    color: #0A554F;
+    /* Change to your desired color */
+    border: 1px solid #0A554F;
+    /* Change to your desired color */
+    background-color: #f2f2f2;
+    /* Background color when password is shown */
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+/* login end */
+
+/* registration start */
+.promo__code {
+    display: none;
+}
+
+#promoField {
+    color: #F4BD29;
+    cursor: pointer;
+    display: inline-block;
+    margin-bottom: 0;
+}
+
+/* registration end */
+
+/* spin win start */
+.spinwin__area li {
+    width: 100%;
+    background: #f9f9f9;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.spinwin__area li:last-child {
+    margin-bottom: 0;
+}
+
+.spinwin__area li span {
+    width: 40px;
+    background: #f1ecec;
+    text-align: center;
+    border-radius: 50%;
+    height: 40px;
+    line-height: 40px;
+}
+
+/* spin win end */
